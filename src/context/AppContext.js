@@ -1,9 +1,9 @@
 import { createContext, useState } from "react";
 import { baseUrl } from '../baseUrl'
 
-const AppContext = createContext();
+export const AppContext = createContext();
 
-function AppContextProvider({ children }) {
+export function AppContextProvider({ children }) {
     const [loading, setLoading] = useState(false);
     const [posts, setPosts] = useState([]);
     const [pageCount, setPageCount] = useState(1);
@@ -48,4 +48,3 @@ function AppContextProvider({ children }) {
     </AppContext.Provider>)
     //syntax will always remain same, only value can change or the name of the children
 }
-export default AppContext;
